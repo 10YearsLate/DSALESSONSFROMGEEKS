@@ -1,0 +1,20 @@
+1 Nov - Sorting & Searching Algo,Math
+2 Nov -Array,Tree,BST
+3 Nov -LinkedList , Stack,Queue
+4 Nov -Heap,Hashing,Graph
+5 Nov String ,recursion,bitmagic
+6 Nov Matrix ,Greedy
+7 Nov Backtrack,DP
+
+
+8 Nov - 1-15 Leetcode
+.
+.
+.
+4 Feb   1235-1250 Leetcode
+
+
+9 Feb Project Euler
+.
+.
+.
