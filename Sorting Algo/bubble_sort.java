@@ -29,10 +29,10 @@ Test Case:
 
 
 i/p: 0 1 2 3
-o/p: 
-Test 
+o/p:
+Test
 
-i/p: 
+i/p:
 o/p:
 
 
@@ -43,29 +43,29 @@ import java.util.*;
 public class bubble_sort{
 
 	public static void swap(int[] a, int i,int j){
-	
-		int temp=a[j];
-		a[j]=a[j+1];
-		a[j+1]=temp;
-	
+
+		int temp=a[i];
+		a[i]=a[j];   //bug fixed
+		a[j]=temp;
+
 	}
 
 	public static int[] bubble_worst(int[] a){
-	
-		for(int i=0;i<a.length;i++){       
-		
-			for(int j=0;j<a.length-i;j++){
-			
+
+		for(int i=0;i<a.length;i++){
+
+			for(int j=0;j<a.length-i-1;j++){
+
 			if(a[j] > a[j+1]) swap(a,j,j+1);
 			}
-		
+
 		}
 		return a;
-	
+
 	}
 
 	public static void main(String[] args){
-	
+
 	Scanner s=new Scanner(System.in);
 	System.out.println("Enter Number of element");
 	int N=s.nextInt();
@@ -74,10 +74,12 @@ public class bubble_sort{
 	for(int i=0;i<a.length;i++){
 		a[i]=s.nextInt();
 	}
-	
+
 	bubble_worst(a);
-	
-	
+	for(int i=0;i<a.length;i++){
+		System.out.print(a[i]+ " ");
+	}
+
 	}
 
 
@@ -85,8 +87,9 @@ public class bubble_sort{
 
 /*Bugs:
 
-1.swap does not have a return type - need to review the code 
+1.swap does not have a return type - need to review the code
 2.Package not imported
 2.typo in class
+3.Another bug is passing argument in swap
 
 */
