@@ -106,8 +106,8 @@ public class bubble_sort{
 		a[i]=s.nextInt();
 	}
 
-	bubble_worst(a);  // this has O(n2) complexity in average and best case
-    bubble_optimal(a); // this has O(n) complexity in best case
+	bubble_worst(a);  // this has O(n2) complexity in average and best case  ;Space compexisity O(1)
+    bubble_optimal(a); // this has O(n) complexity in best case ;Space compexisity O(1)
 	for(int i=0;i<a.length;i++){
 		System.out.print(a[i]+ " ");
 	}
