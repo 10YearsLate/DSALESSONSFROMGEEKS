@@ -4,7 +4,7 @@
 Date:
 Author:
 
-Algorithm:
+Algorithm(Naive):
 
 1.i-0..n-1 Iterate over the Array for n item
 2.j=0..n-i iterate over the array for n-i item
@@ -24,6 +24,15 @@ Algorithm:
 3rd inner loop end
 
 0 8 9 10
+
+
+Algorith(Optimal):
+
+1.Interate i=1--N
+2.Interate j=1-N-i
+3. If a[j]>a[j+1] swap ; mark isswapped true
+4end inner loop
+5.if isswapped false break;
 
 Test Case:
 
@@ -64,6 +73,28 @@ public class bubble_sort{
 
 	}
 
+
+    public static int[] bubble_optimal(int[] a){
+
+        boolean isSwiped=false;
+
+		for(int i=0;i<a.length;i++){
+
+			for(int j=0;j<a.length-i-1;j++){
+
+			    if(a[j] > a[j+1]) {
+                    swap(a,j,j+1);
+                    isSwiped=true;
+			    }
+
+                if(!isSwiped) break;
+            }
+
+		}
+		return a;
+
+	}
+
 	public static void main(String[] args){
 
 	Scanner s=new Scanner(System.in);
@@ -75,7 +106,8 @@ public class bubble_sort{
 		a[i]=s.nextInt();
 	}
 
-	bubble_worst(a);
+	bubble_worst(a);  // this has O(n2) complexity in average and best case
+    bubble_optimal(a); // this has O(n) complexity in best case
 	for(int i=0;i<a.length;i++){
 		System.out.print(a[i]+ " ");
 	}
