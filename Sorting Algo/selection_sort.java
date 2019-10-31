@@ -2,11 +2,11 @@
 
 Algorithm: Speciality is minimum number of swap
 
-1.Max=-1
-1.Iterate i=0;j=0l ;1..N-j;j++
-2.if(a[i])>Max ;Max=a[i];Mazindex=i;
-3.End of inner loop
-4.Swap(a[n-1],a[maxindex])
+1.iterate from o...n-1 with i
+1.set minindex=i
+2.inner loop from j=i+1;j<n
+3.compare and set minindex
+4.Swap(a[o],a[minindex])
 
 
 
@@ -30,18 +30,40 @@ i/p: 6 2 5 1
 
 public class selection_sort{
 
+
+    public static int[] stable_selection(int[] a){
+
+        for(int i=0;i<a.length;i++){
+            int MI=i;
+            for(int j=i+1;j<a.length;j++){
+
+                if(a[MI]>a[j]) MI=j;
+
+            }
+            int key=a[MI];
+            while(MI>i){
+                a[MI]=a[MI-1];
+
+            }
+            a[i]=key;
+        }
+
+        return a;
+    }
+
     public static int[] selection(int[] a){
 
-        int MAX=-1;
-        int MI=-1;
+
+        int MI;
         for(int i=0;i<a.length;i++){
-            for(int j=0;j<a.length-i;j++) {
-                if(a[i]>MAX){
-                MAX=a[i];
-                MI=i;
-            }
-            swap(a,i,a.length-1);
-            MI=-1;
+            MI=i;
+            for(int j=i+1;j<a.length;j++) {  // time complexity o(n2) , this is not stable
+
+                if(a[j]<a[i]){
+                    MI=j;
+                }
+                swap(a,i,MI);
+
             }
 
         }
@@ -49,6 +71,7 @@ public class selection_sort{
         return a;
     }
     private static void swap(int[] a, int i, int j) {
+        //System.out.print(i+" "+j);
         int temp=a[i];
         a[i]=a[j];
         a[j]=temp;
@@ -57,8 +80,14 @@ public class selection_sort{
 
             int[] a={5,2,3,1};
             selection(a);
-            System.out.print(a);
+            stable_selection(a); //this method is stable, preious one is not
+            for(int i=0;i<a.length;i++){
+		        System.out.print(a[i]+ " ");
+	        }
+
 
 
     }
 }
+
+//Bug in swap function
