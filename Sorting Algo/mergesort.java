@@ -54,7 +54,7 @@ public class mergesort{
         }
 
         for(int g=0;g<rarr.length;g++){
-            larr[g]=a[mid+1+g];
+            rarr[g]=a[mid+1+g];
         }
 
         while(i<larr.length && j<rarr.length){
