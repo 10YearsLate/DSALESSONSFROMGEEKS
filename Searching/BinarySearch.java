@@ -29,13 +29,28 @@ public class BinarySearch{
 
   }
 
+  public static int bsearchiter(int[] a,int l,int h,int item){
+
+      int pos=-1;
+
+      for(int i=l;i<=h;i++){
+          int mid=l+(h-l)/2;
+          //System.out.println(a[mid]+" "+mid);
+          if(a[mid]==item) pos=mid;
+          if(a[mid]>item) h=mid-1;
+          if(a[mid]<item) l=mid+1;
+      }
+      return pos;
+  }
+
 
   public static void main(String[] args){
 
     int[] a={1,2,3,4,5,6,7};
     int item=5;
-    int index=bsearch(a,0,6,5);
+    int index=bsearch(a,0,6,item);
     System.out.println(index);
+    System.out.println(bsearchiter(a,0,6,item));
 
   }
 
