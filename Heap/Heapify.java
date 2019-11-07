@@ -8,14 +8,36 @@
 
 public class Heapify{
 
-  public static int[] heapify(int[] op,int start){
+  public static int[] heapify(int[] op,int start,int n){
   
+  int smallest=start;
   int left=(2*start)+1;
   int right=(2*start)+2;
   
-  if(op[start]>op[left]){
+  if(left<n && arr[smallest]>arr[left]){
+  
+  smallest=left;
     
   }
+  
+  if(right<n && arr[smallest]>arr[right]){
+  
+  smallest=right;
+  
+  }
+  
+  if(smallest!=start){
+    int temp=smallest;
+    smallest=start;
+    start=temp;
+    Heapify(op,int smallest,n);
+    }
+  
+  }
+  
+  public static buildHeap(int[] a,start,int n){
+  
+  for(int i=start;i>=0;i--) Heapify(a,i,n)
   
   }
 
@@ -28,7 +50,7 @@ public class Heapify{
     int n=a.length;
     int start=(n-2)/2
     
-    op=heapify(op,start);
+    op=buildheap(arr,start,n);
     return op;
   
   }
