@@ -6,60 +6,67 @@
 5.Delete Item                        --Delete
 6.update Item                         --DecreaseKey
 
+*/
+
 public class Heapify{
 
   public static int[] heapify(int[] op,int start,int n){
-  
+
   int smallest=start;
   int left=(2*start)+1;
   int right=(2*start)+2;
-  
-  if(left<n && arr[smallest]>arr[left]){
-  
-  smallest=left;
-    
+
+  if(left<n && op[smallest]>op[left]){
+
+    smallest=left;
+
   }
-  
-  if(right<n && arr[smallest]>arr[right]){
-  
-  smallest=right;
-  
+
+  if(right<n && op[smallest]>op[right]){
+
+    smallest=right;
+
   }
-  
+
   if(smallest!=start){
     int temp=smallest;
     smallest=start;
     start=temp;
-    Heapify(op,int smallest,n);
+    heapify(op,smallest,n);
     }
-  
+   return op;
   }
-  
-  public static buildHeap(int[] a,start,int n){
-  
-  for(int i=start;i>=0;i--) Heapify(a,i,n)
-  
+
+  public static int[] buildHeap(int[] a,int start,int n){
+
+  for(int i=start;i>=0;i--) heapify(a,i,n);
+
+  return a;
+
   }
 
   public static int[] buildHeap(int[] a){
-  
+
     int[] op=new int[100]; //100 capacity
     for(int i=0;i<a.length;i++){
       op[i]=a[i];
     }
     int n=a.length;
-    int start=(n-2)/2
-    
-    op=buildheap(arr,start,n);
+    int start=(n-2)/2;
+
+    op=buildHeap(op,start,n);
     return op;
-  
+
   }
 
   public static void main(String[] args){
-  
+
     int[] a={2,3,6,1,2,67,20};
-    
-  
+
+    buildHeap(a);
+
+    System.out.println(a[0]);
+
   }
 
 }
