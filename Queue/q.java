@@ -3,16 +3,16 @@ public class q{
   int front,rear;
   int size;
   int[] a;
-  
+
   q(int s){
     size=s;
     front=-1;
     rear=-1;
     a=new int[size];
   }
-  
+
   private void enq(int item){
-  
+
     if(front==-1){
       front++;rear++;
       a[front]=item;
@@ -22,23 +22,23 @@ public class q{
       rear++;
       a[rear]=item;
     }
-   
-   private int dq{
-   
+
+   private int dq(){
+
    int op=a[front];
-   front++
-   
-   
+   front++;
+    //eturn
+
    }
-    
-  
+
+
   }
 
   public static void main(String[] args){
-      
+
       q qds=new q();
       q.enq(4)
       q.dq();
-      
+
   }
 }
