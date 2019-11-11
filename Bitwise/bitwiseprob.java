@@ -19,20 +19,24 @@ public class bitwiseprob{
         System.out.println(findoddpair(b)[0]+" "+findoddpair(b)[1]);   //Bug found
 
         ArrayList<String> al=Generatepowerset("ABC");
+
+        //String s="ABC";
+        //System.out.print(s[i]);
         
     }
 
-    private static ArrayList<String> Generatepowerset(String string) {
-        
+    private static ArrayList<String> Generatepowerset(String string) { 
+        //String[] s=string;
         ArrayList<String> al=new ArrayList<String>();
         int n=string.length();
         int num=(1<<n);
         for(int i=0;i<=num;i++){
             for(int j=0;j<n;j++){
-                //if()
+                if(((1<<j)&i)!=0) System.out.print(string.charAt(j));
             }
+            System.out.print("\n");
         }
-        return null;
+        return al;
     }
 
     private static int[] findoddpair(int[] b) {
