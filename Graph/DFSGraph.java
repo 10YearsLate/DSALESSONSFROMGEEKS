@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class DFSGraph{
 
   private ArrayList<ArrayList<Integer>> al;
@@ -43,14 +45,14 @@ public class DFSGraph{
   public static void main(String[] args){
   
       DFSGraph d=new DFSGraph();
-      d.createGraph(4);
+      d.createGraph(5);
       
       d.addEdge(1,2);
       d.addEdge(2,3);
       d.addEdge(3,4);
-      d,addEdge(1,4);
+      d.addEdge(1,4);
       
-      DFS(2);
+      d.DFS(2);
   
   
   }
