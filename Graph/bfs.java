@@ -1,4 +1,4 @@
-import java.util.*
+import java.util.*;
 
 public class bfs{
 
@@ -8,7 +8,7 @@ public class bfs{
   
     al=new ArrayList<ArrayList<Integer>>(5);
     for(int i=0;i<5;i++){
-        al.add(new ArrayList<Integer>);
+        al.add(new ArrayList<Integer>());
     }
   }
   
@@ -18,20 +18,23 @@ public class bfs{
     al.get(b).add(a);
   }
   
-  private void bfs(int source){
+  private void bfsutil(int source){
   
     boolean[] visited=new boolean[al.size()];
     
-    Queue<Integer> st=new Queue<Integer>(al.size());
+    Queue<Integer> st=new LinkedList<Integer>();
     
     st.add(source);
     
-    while(!st.isempty()){
-    
+    while(!st.isEmpty()){
+      
       int c=st.remove();
+      
+      if(!visited[c]) System.out.print(c+" ");
       visited[c]=true;
       for(int i=0;i<al.get(c).size();i++){
-        st.add(al.get(c).get(i);
+        
+        if(!visited[al.get(c).get(i)]) st.add(al.get(c).get(i));
       }
     }
     
@@ -47,7 +50,7 @@ public class bfs{
       b.addEdge(3,4);
       b.addEdge(2,4);
       
-      bfs(1);
+      b.bfsutil(1);
       
       
       
