@@ -17,17 +17,18 @@ public class fractionalknapsack{
 
     for(item i: coll){
         
-            System.out.println(i.quantity+" "+i.value+" "+i.ratio);
+            //System.out.println(i.quantity+" "+i.value+" "+i.ratio);
 
         if(i.quantity<capacity){
             capacity=capacity-i.quantity;
             finalval+=i.value;
-            System.out.println(i.quantity+" "+i.value+" "+i.ratio);
+            //System.out.println("if"+i.quantity+" "+i.value+" "+i.ratio);
         }
         else{
-            capacity=0;
+            
             finalval+=capacity*i.ratio;
-            System.out.println(i.quantity+" "+i.value+" "+i.ratio);
+            //System.out.println("else"+i.quantity+" "+i.value+" "+i.ratio);
+            capacity=0;
         }
     }
     System.out.print("Total Val in Knapsack "+finalval);
@@ -50,8 +51,8 @@ class item implements Comparator<item>{
     @Override
     public int compare(item o1, item o2) {
         if(o1.ratio==o2.ratio) return 0;
-        if(o1.ratio>o2.ratio) return 1;
-        if(o1.ratio<o2.ratio) return -1;
+        if(o1.ratio<o2.ratio) return 1;
+        if(o1.ratio>o2.ratio) return -1;
 
         return 0;
 
