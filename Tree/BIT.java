@@ -1,3 +1,28 @@
+/*
+
+When to use Binary Indexed Tree?
+
+Before going for Binary Indexed tree to perform operations over range, one must confirm that the operation or the function is:
+
+Associative. i.e f(f(a, b), c) = f(a, f(b, c)) this is true even for seg-tree
+
+Has an inverse. eg:
+
+addition has inverse subtraction (this example we have discussed)
+
+Multiplication has inverse division
+
+gcd() has no inverse, so we can’t use BIT to calculate range gcd’s
+
+sum of matrices has inverse
+
+product of matrices would have inverse if it is given that matrices are degenerate i.e. determinant of any matrix is not equal to 0
+
+Space Complexity: O(N) for declaring another array of size N
+
+Time Complexity: O(logN) for each operation(update and query as well)*/
+
+
 public class BIT{
 	
 	static int[] a={1,2,3,4,5,2,2,3};
