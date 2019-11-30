@@ -1,0 +1,78 @@
+1.Math (RM,INMO,IMO)
+2.Data Structure
+3.Algo
+4.Competitve Program Portfolio
+5.Project Portfolio in Spring Hybernate Kafka ML
+6.System Design
+
+
+Target - 6 Months (31st March 2020)
+
+Math what to study
+1.Math Circle Russian 
+2.https://www.imo-official.org/problems.aspx
+3.Combinatorics
+4.Number Theory
+5.Algebra
+6.Functional Equations
+7.Geometry
+8.https://artofproblemsolving.com/community/c4t170f4_polynomial
+9.Project EUler
+10.Cp Algorithm
+11.Math Spoj
+12.GeeksforGeeks
+
+So the stretegy is to solve problem and learn and keep a note
+
+
+Data Structure what to study
+1.GeeksforGeeks
+2.CLRS
+3.CCI
+4.Spoj ,Leetcode,codeforce,codechef
+
+
+Algo what to study:
+1.GeeksforGeeks
+2.CLRS
+3.CCI
+4.Spoj ,Leetcode,codeforce,codechef
+
+CP portfolio
+
+1.COdeforce
+2.Codechef
+
+Project:
+
+Automatic Support Environment 
+I will use Spring,hybernate,kafka
+Idea is to build a sample MOS,BugDB,KM,Weblogic and use https://docs.oracle.com/cd/E25054_01/web.1111/e13813/reference.htm#i1188110  diagnostic command
+
+System Design:
+Youtube vedios
+Grokking system design
+
+CS Core:
+
+Operating System  from GeeksforGeeks -Sunday
+DBMS from GeeksforGeeks -Sunday
+
+When & timeline
+
+Project you do in office hours
+CS core once in a week -Sunday
+System design once in a week-Sunday
+Codechef codeforece all contest
+Math-Monday,Thursday
+Algo-Tuesday,Friday
+DSA-Wednesday,Saturday
+
+
+
+
+
+
+
+
+
