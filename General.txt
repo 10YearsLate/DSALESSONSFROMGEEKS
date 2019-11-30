@@ -68,6 +68,29 @@ Math-Monday,Thursday
 Algo-Tuesday,Friday
 DSA-Wednesday,Saturday
 
+ASE Feature
+
+1.MOS Portal feature
+
+Friendly UI
+Paste Screenshot option
+Record Audio option
+Record vedio option,Play Vedio,audio option
+
+Automatic Log capture option
+
+Auto suggest KM ,Bug 
+
+Quick type/ shortkey feature
+
+Push to SME
+
+SME Quue.Management Queue
+
+collaboration tab, Invite for collaboration option
+
+Ageing Tracker
+
 
 
 
