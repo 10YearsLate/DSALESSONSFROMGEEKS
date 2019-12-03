@@ -1,0 +1,6 @@
+1Dec:
+    Disjoint Set Theory CLRS
+    
+2Dec:
+    Math CCI , Spring Introduction
+    
