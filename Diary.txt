@@ -4,3 +4,7 @@
 2Dec:
     Math CCI , Spring Introduction
     
+3Dec:
+
+    Disjoint Set, Leetcode problem 2-3
+    
